@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Quản lý điểm sinh viên</title><link rel="stylesheet" href="./css/style.css"><link rel="stylesheet" href="./css/table.css"><link rel="stylesheet" href="./css/modal.css"></head>
+<body><a class="skip-link" href="#main">Chuyển đến nội dung chính</a>
+<header class="page-header"><div><h1>Quản lý điểm sinh viên</h1><p>Lớp CNTT1-K18 · Học kỳ 1</p></div><nav><a href="./index.html">Bảng điểm</a><a href="./statistics.html">Thống kê</a></nav></header>
+<main id="main" class="container"><section class="summary">
+<div class="summary-card"><span>Tổng sinh viên</span><strong id="totalStudents">0</strong></div>
+<div class="summary-card"><span>Điểm trung bình lớp</span><strong id="classAverage">0.00</strong></div>
+<div class="summary-card"><span>Sinh viên nhận học bổng</span><strong id="scholarshipCount">0</strong></div></section>
+<section class="panel"><div class="panel-heading"><div><h2>Bảng điểm lớp</h2><p>Sắp xếp theo tên tiếng Việt · Chọn “Sửa điểm” để cập nhật</p></div><input type="search" id="searchInput" placeholder="Tìm mã hoặc tên..." aria-label="Tìm sinh viên"></div>
+<div id="loadingMessage" class="message">Đang tải dữ liệu…</div><div id="errorMessage" class="message error" hidden></div>
+<div class="table-wrapper"><table id="studentTable"><thead id="tableHead"></thead><tbody id="studentTableBody"></tbody></table></div><p id="resultCount" class="result-count"></p>
+</section>
+<section class="panel"><h2>So sánh hai sinh viên</h2><div class="compare-controls"><label>Sinh viên 1 <select id="compare1"></select></label><label>Sinh viên 2 <select id="compare2"></select></label><button id="compareButton">So sánh</button></div><div id="comparison"></div></section>
+</main>
+<div id="studentModal" class="modal" hidden><div class="modal-backdrop" data-close-modal></div><section class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal-header"><h2 id="modalTitle">Chỉnh sửa điểm</h2><button id="closeModal" class="close-button" aria-label="Đóng">×</button></div><div id="studentDetail"></div></section></div>
+<script type="module" src="./js/app.js"></script></body></html>
